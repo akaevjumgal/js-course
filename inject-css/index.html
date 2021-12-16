@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card markup</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <dialog id="cat-card">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Heading</h4>
+            </div>
+            <div class="card-body">
+                <img src="cat.jpeg" alt="cat">
+                <p class="card-description">This is meme cat</p>
+            </div>
+            <div class="card-actions">
+                <button class="card-button" onclick="toggleDialog()">Cancel</button>
+                <button class="card-button save-button">Save</button>
+            </div>
+        </div>
+    </dialog>
+    <menu>
+        <button onclick="toggleDialog()">Open Dialog</button>
+    </menu>
+    <script>
+        const toggleDialog = () => {
+            const catCardRef = document.querySelector('#cat-card');
+            catCardRef.open = !catCardRef.open;
+        }
+    </script>
+</body>
+</html>

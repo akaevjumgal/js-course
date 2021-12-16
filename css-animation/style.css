@@ -1,0 +1,49 @@
+.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+button {
+    background: coral;
+    border: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.box {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    animation: slide 2s infinite ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slide {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(100vw, 100vh, 100vh);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}

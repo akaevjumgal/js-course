@@ -1,0 +1,154 @@
+* {
+   padding: 0;
+   margin: 0; 
+}
+
+:root {
+    --yellow: #D5CA69;
+    --coral: #F4A2A2;
+    --cyan: #69C8D5;
+    --blue: #89AFE8;
+    --purple: #BB9BE4;
+    --green: #898b88;
+    --pink: #F2A4DC;
+    --headerWidth: 65px;
+}
+
+.header {
+    height: var(--headerWidth);
+    background: #E6B69C;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 81px;
+    padding-bottom: 138px;
+    flex: auto;
+}
+
+.first-section {
+    height: 435px;
+    display: flex;
+}
+
+.yellow-block {
+    background: var(--yellow);
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+}
+
+.brown-block {
+    width: 70%;
+    background: var(--coral);
+    height: 100%;
+    display: none;
+}
+
+
+.second-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 135px;
+    margin-bottom: 133px;
+}
+
+.second-block {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+.cyan-block {
+    background: var(--cyan);
+    height: 259px;
+    margin-bottom: 21px;
+}
+
+.blue-block {
+    background: var(--blue);
+    height: 85px;
+}
+
+.third-section {
+    display: flex;
+    height: 637px;
+}
+
+.purple-block {
+    background: var(--purple);
+    height: 100%;
+    display: none;
+    width: calc(100% / 4);
+}
+
+.green-block {
+    background: var(--green);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.footer {
+    background: var(--pink);
+    height: 278px;
+    flex-shrink: 0;
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+/* разрешение планшетов */
+@media screen and (min-width: 768px) {
+    .yellow-block, .brown-block {
+        width: 50%;
+    }
+    .brown-block {
+        display: block;
+    }
+    .second-block {
+        width: 48%;
+    }
+    .second-block:not(:first-child) {
+        margin-left: 15px;
+    }
+    .second-block:nth-child(3),
+    .second-block:nth-child(4) {
+        margin-top: 34px;
+    }
+    .second-block:nth-child(3) {
+        margin-left: 0;
+    }
+    .purple-block:not(.purple-block-2) {
+        display: block;
+    }
+    .green-block {
+        margin: 0 15px;
+    }
+}
+/* разрешение ноутбуков */
+@media screen and (min-width: 1024px) {
+    .yellow-block {
+        width: 30%;
+    }
+    .brown-block {
+        width: 70%;
+    }
+    .second-block:nth-child(3),
+    .second-block:nth-child(4) {
+        margin-top: 0;
+    }
+    .second-block:nth-child(3) {
+        margin-left: 15px;
+    }
+    .second-section {
+        flex-wrap: unset;
+    }
+    .purple-block-2 {
+        display: block;
+    }
+    .green-block {
+        width: calc(100% / 2);
+    }
+}

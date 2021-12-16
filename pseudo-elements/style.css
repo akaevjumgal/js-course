@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+}
+
+ul li:first-child {
+    color: brown;
+}
+
+.link {
+    position: relative;
+    width: 100px;
+    height: 30px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 30%;
+}
+
+.activated:active {
+    color: red;
+}
+
+.focused:focus::placeholder {
+    color: green;
+}
+
+.visit:visited {
+    color: gold;
+}

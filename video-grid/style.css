@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-header {
+    display: none;
+    color: #0000008a;
+}
+
+.grid-body {
+    display: grid;
+    grid-template-areas: 
+        'date age'
+        'firstName lastName';
+    color: #0000008a;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+}
+
+.grid-body div:nth-child(1) {
+    display: none;
+}
+
+.grid-body div:nth-child(2) {
+    grid-area: date;
+    place-self: end;
+}
+.grid-body div:nth-child(5) {
+    grid-area: age;
+}
+.grid-body div:nth-child(3) {
+    grid-area: firstName;
+    place-self: end;
+}
+.grid-body div:nth-child(4) {
+    grid-area: lastName;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-header {
+        display: grid;
+        grid-template-columns: 10% 20% 20% 20% 30%;
+    }
+
+    .grid-body {
+        grid-template-columns: 10% 20% 20% 20% 30%;
+        color: #000000de;
+        gap: unset;
+    }
+
+    .grid-body div:nth-child(1) {
+        display: block;
+    }
+
+    .grid-body div:nth-child(2) {
+        grid-area: unset;
+        place-self: unset;
+    }
+    .grid-body div:nth-child(5) {
+        grid-area: unset;
+    }
+    .grid-body div:nth-child(3) {
+        place-self: unset;
+        grid-area: unset;
+    }
+    .grid-body div:nth-child(4) {
+        grid-area: unset;
+    }
+}

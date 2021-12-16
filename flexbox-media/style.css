@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first {
+    background: chocolate;
+}
+
+.second {
+    background: lightcoral;
+}
+
+.third {
+    background: lightseagreen;
+}
+/* разрешение планшетов */
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+    .column {
+        width: calc(100% / 3);
+    }
+}
+/* разрешение ноутбуков */
+@media screen and (min-width: 1024px) {
+    .column {
+        background: cornflowerblue;
+    }
+}
+/****************************
+**** разрешение мониторов ***
+*****************************/
+@media screen and (min-width: 1280px) {
+    .column p {
+        font-size: 50px;
+    }
+}
