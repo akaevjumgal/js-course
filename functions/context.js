@@ -1,16 +1,20 @@
+min = (Math.random() * 60);
 
-const user = {
-    name: 'John',
+document.write('min = ' + min);
+
+if (min <= 15)
+{
+    document.write('<br>' + 'Answer - first quarter');
 }
-
-function greeting() {
-    return `Hi my name is ${this.name}`;
+else if (min <= 30)
+{
+    document.write('<br>' + 'Answer - second quarter');
 }
-
-const array = ['a', 'b', 'c'];
-
-const object = {...user};
-const copiedArray = array.map((p) => p = 'd');
-
-console.log(array);
-console.log(copiedArray)
+else if (min <= 45)
+{
+    document.write('<br>' + 'Answer - third quarter');
+}
+else if (min <= 60)
+{
+    document.write('<br>' + 'Answer - fourth quarter ');
+}
