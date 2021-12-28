@@ -1,16 +1,20 @@
 
 class Mathematicks {
+    static a = 10;
+    static b = 20;
     constructor(a, b) {
         this.a = a
         this.b = b
     }
 
-    calculateArea() {
+    get calculateArea() {
         return this.a * this.b
     }
 }
 
 class Triangle extends Mathematicks {
+    a = 20;
+    b = 40;
     constructor(a, b, c) {
         super(a, b, c)
         this.c = c
@@ -31,7 +35,7 @@ const square = new Mathematicks(100, 100)
 const triangle = new Triangle(100, 100, 200)
 const trapezia = new Trapezia(100, 100, 200)
 
-console.log(square.calculateArea())
-console.log(triangle.calculateArea())
-console.log(trapezia.calculateArea())
+console.log(triangle)
+// console.log(triangle.calculateArea())
+// console.log(trapezia.calculateArea())
 
