@@ -46,7 +46,7 @@ const userList = [
 // Внесение данных в список
 // console.log(userList.push(new User('Vova', 50, true)));
 
-// Удаление элементы с конца списка
+// Удаление элемента с конца списка
 // console.log(userList.pop());
 
 // Замена данными в указанном промежутке
